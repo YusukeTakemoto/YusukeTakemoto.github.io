@@ -42,9 +42,10 @@ var coneGeometry2 = new THREE.ConeGeometry( 0.5, -1, 5 );
 var coneMaterial = new THREE. MeshPhongMaterial( {color: 0x0000ff} );
 var cone1 = new THREE.Mesh( coneGeometry1, coneMaterial );
 var cone2 = new THREE.Mesh( coneGeometry2, coneMaterial );
-cone.position.set( 0, 1, -5 );
-cone.position.set( 0, -1, -5 );
-scene.add( cone );    
+cone1.position.set( 0, 1, -5 );
+cone2.position.set( 0, -1, -5 );
+scene.add( cone1 );
+scene.add( cone2 );
 
 
     // 平行光源1
@@ -63,7 +64,8 @@ scene.add( cone );
       requestAnimationFrame(update);
   
       // 箱を回転させる
-      cone.rotation.y += 0.01;
+      cone1.rotation.y += 0.01;
+      cone2.rotation.y += 0.01;
       sphere.rotation.y += 0.01;
 
       //torus.position.z +=0.01;
