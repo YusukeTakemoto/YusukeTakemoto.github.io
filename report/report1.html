@@ -54,14 +54,15 @@ var torusMaterial = new THREE. MeshToonMaterial( { color: 0xd66b00 } );
 var torus = new THREE.Mesh( torusGeometry, torusMaterial );
 torus.rotation.x = 1.57
 torus.position.set( 0, 0, 0);
-scene.add( torus );    
+//scene.add( torus );    
 
      //全体のオブジェクト
     //const all = new THREE.Object3D(); 
     const all = new THREE.Group()
-    all.add(sphere); // 箱1を追加 
-    all.add(cone1); // 箱2を追加 
-    all.add(cone2); // 箱3を追加 
+    all.add(sphere); // 球を追加 
+    all.add(cone1); // 円錐1を追加 
+    all.add(cone2); // 円錐を2追加 
+    all.add(torus); //　ドーナッツを追加
     all.position.set(0,0,-5);//箱1～3のグループの原点の位置
     scene.add(all);     
 
