@@ -32,7 +32,7 @@
 var sphereGeometry = new THREE.SphereGeometry( 0.3, 32, 32 ); 
 var sphereMaterial = new THREE. MeshPhongMaterial( {color: 0xff8800} );
 var sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
-sphere.position.set( 0, 0, -5 );
+sphere.position.set( 0, 0, 0 );
 //scene.add( sphere );
 
 //角すい〜円すい
@@ -42,8 +42,8 @@ var coneGeometry2 = new THREE.ConeGeometry( 0.3, -1, 5 );
 var coneMaterial = new THREE. MeshPhongMaterial( {color: 0x0000ff} );
 var cone1 = new THREE.Mesh( coneGeometry1, coneMaterial );
 var cone2 = new THREE.Mesh( coneGeometry2, coneMaterial );
-cone1.position.set( 0, 0.8, -5 );
-cone2.position.set( 0, -0.8, -5 );
+cone1.position.set( 0, 0.8, 0 );
+cone2.position.set( 0, -0.8, 0 );
 //scene.add( cone1 );
 //scene.add( cone2 );
 
