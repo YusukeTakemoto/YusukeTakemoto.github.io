@@ -29,7 +29,7 @@
     var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
 
 //球
-var sphereGeometry = new THREE.SphereGeometry( 0.5, 32, 32 ); 
+var sphereGeometry = new THREE.SphereGeometry( 0.2, 32, 32 ); 
 var sphereMaterial = new THREE. MeshPhongMaterial( {color: 0xff0000} );
 var sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
 sphere.position.set( 0, 0, 0 );
@@ -42,8 +42,8 @@ var coneGeometry = new THREE.ConeGeometry( 0.4, 1, 10 );
 var coneMaterial = new THREE. MeshPhongMaterial( {color: 0x0000ff} );
 var cone1 = new THREE.Mesh( coneGeometry, coneMaterial );
 var cone2 = new THREE.Mesh( coneGeometry, coneMaterial );
+cone1.rotation.x = 3.14;
 cone1.position.set( 0, 0.5, 0 );
-cone2.rotation.x = 3.14;
 cone2.position.set( 0, -0.5, 0 );
 //scene.add( cone1 );
 //scene.add( cone2 );
