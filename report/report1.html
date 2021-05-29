@@ -36,13 +36,14 @@ sphere.position.set( 0, 0, 0 );
 //scene.add( sphere );
 
 //角すい〜円すい
-var coneGeometry1 = new THREE.ConeGeometry( 0.3, 1, 5 ); 
-var coneGeometry2 = new THREE.ConeGeometry( 0.3, -1, 5 );
+var coneGeometry = new THREE.ConeGeometry( 0.3, 1, 5 ); 
+//var coneGeometry2 = new THREE.ConeGeometry( 0.3, -1, 5 );
 //半径、高さ、底面の分割数
 var coneMaterial = new THREE. MeshPhongMaterial( {color: 0x0000ff} );
-var cone1 = new THREE.Mesh( coneGeometry1, coneMaterial );
-var cone2 = new THREE.Mesh( coneGeometry2, coneMaterial );
+var cone1 = new THREE.Mesh( coneGeometry, coneMaterial );
+var cone2 = new THREE.Mesh( coneGeometry, coneMaterial );
 cone1.position.set( 0, 0.8, 0 );
+cone2.rotation.x = 3
 cone2.position.set( 0, -0.8, 0 );
 //scene.add( cone1 );
 //scene.add( cone2 );
