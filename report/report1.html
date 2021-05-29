@@ -33,7 +33,7 @@ var sphereGeometry = new THREE.SphereGeometry( 0.8, 32, 32 );
 var sphereMaterial = new THREE. MeshPhongMaterial( {color: 0xff8800} );
 var sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
 sphere.position.set( 0, 0, -5 );
-//scene.add( sphere );
+scene.add( sphere );
 
 //角すい〜円すい
 var coneGeometry1 = new THREE.ConeGeometry( 0.5, 1, 5 ); 
@@ -44,18 +44,18 @@ var cone1 = new THREE.Mesh( coneGeometry1, coneMaterial );
 var cone2 = new THREE.Mesh( coneGeometry2, coneMaterial );
 cone1.position.set( 0, 0.8, -5 );
 cone2.position.set( 0, -0.8, -5 );
-//scene.add( cone1 );
-//scene.add( cone2 );
+scene.add( cone1 );
+scene.add( cone2 );
 
      //全体のオブジェクト
     //const all = new THREE.Object3D(); 
-    const all = new THREE.Group()
-    all.add(sphere); // 箱1を追加 
-    all.add(cone1); // 箱2を追加 
-    all.add(cone2); // 箱3を追加 
+    //const all = new THREE.Group()
+    //all.add(sphere); // 箱1を追加 
+    //all.add(cone1); // 箱2を追加 
+    //all.add(cone2); // 箱3を追加 
     //all.add(box4); // 箱4を追加 
-    all.position.set(0,0,-5);//箱1～4のグループの原点の位置
-    scene.add(all);     
+    //all.position.set(0,0,-5);//箱1～4のグループの原点の位置
+    //scene.add(all);     
 
 
     // 平行光源1
@@ -74,12 +74,12 @@ cone2.position.set( 0, -0.8, -5 );
       requestAnimationFrame(update);
   
       // 箱を回転させる
-      //cone1.rotation.y += 0.01;
-      //cone2.rotation.y += 0.01;
-      //sphere.rotation.y += 0.01;
+      cone1.rotation.y += 0.01;
+      cone2.rotation.y += 0.01;
+      sphere.rotation.y += 0.01;
             // 箱を回転させる
-        all.rotation.x += 0.01;
-        all.rotation.y += 0.01;
+        //all.rotation.x += 0.01;
+        //all.rotation.y += 0.01;
   
       renderer.render(scene, camera);
     };
