@@ -49,7 +49,7 @@ cone2.position.set( 0, -0.8, 0 );
 //scene.add( cone2 );
     
   //ドーナッツ
-var torusGeometry = new THREE.TorusGeometry( 0.8, 0.1, 30, 30 ); 
+var torusGeometry = new THREE.TorusGeometry( 0.5, 0.3, 30, 30 ); 
 var torusMaterial = new THREE. MeshToonMaterial( { color: 0xd66b00 } );
 var torus = new THREE.Mesh( torusGeometry, torusMaterial );
 torus.rotation.x = 1.57
@@ -74,7 +74,7 @@ torus.position.set( 0, 0, 0);
     scene.add(directionalLight1);
     // 平行光源2
         var directionalLight2 = new THREE.DirectionalLight(0xffffff);
-    directionalLight2.position.set(-1, -1, 1);
+    directionalLight2.position.set(-1, 1, 1);
     // シーンに追加
     scene.add(directionalLight2);
   
@@ -91,7 +91,7 @@ torus.position.set( 0, 0, 0);
       //sphere.rotation.y += 0.01;
             // 箱を回転させる
         all.rotation.x += 0.01;
-        all.rotation.y += 0.05;
+        all.rotation.y += 0.01;
         //all.rotation.z += 0.01;
   
       renderer.render(scene, camera);
