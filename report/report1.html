@@ -36,7 +36,7 @@ sphere.position.set( 0, 0, 0 );
 //scene.add( sphere );
 
 //角すい〜円すい
-var coneGeometry = new THREE.ConeGeometry( 0.6, 1, 10 ); 
+var coneGeometry = new THREE.ConeGeometry( 0.5, 1, 20 ); 
 //半径、高さ、底面の分割数
 var coneMaterial = new THREE. MeshPhongMaterial( {color: 0x0000ff} );
 var cone1 = new THREE.Mesh( coneGeometry, coneMaterial );
@@ -92,7 +92,7 @@ torus2.position.set( 0, -1, 0);
             // 箱を回転させる
         all.rotation.x += 0.01;
         //all.rotation.y += 0.01;
-        //all.rotation.z += 0.01;
+        all.rotation.z += 0.01;
   
       renderer.render(scene, camera);
     };
