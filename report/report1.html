@@ -51,10 +51,13 @@ cone2.position.set( 0, -0.5, 0 );
     
   //ドーナッツ
 var torusGeometry = new THREE.TorusGeometry( 0.7, 0.1, 30, 30 ); 
-var torusMaterial = new THREE. MeshToonMaterial( { color: 0x00ff00 } );
-var torus = new THREE.Mesh( torusGeometry, torusMaterial );
-torus.rotation.x = 1.57
-torus.position.set( 0, 0, 0);
+var torusMaterial1 = new THREE. MeshToonMaterial( { color: 0x00ff00 } );
+var torus1 = new THREE.Mesh( torusGeometry, torusMaterial );
+var torus2 = new THREE.Mesh( torusGeometry, torusMaterial );
+torus1.rotation.x = 1.57; 
+torus.position.set( 0, 1, 0);
+torus2.rotation.x = 1.57;
+torus.position.set( 0, -1, 0);
 //scene.add( torus );    
 
      //全体のオブジェクト
