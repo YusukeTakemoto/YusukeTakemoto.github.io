@@ -36,7 +36,7 @@ sphere.position.set( 0, 0, 0 );
 //scene.add( sphere );
 
 //角すい〜円すい
-var coneGeometry = new THREE.ConeGeometry( 0.3, 1, 5 ); 
+var coneGeometry = new THREE.ConeGeometry( 0.3, 1, 10 ); 
 //var coneGeometry2 = new THREE.ConeGeometry( 0.3, -1, 5 );
 //半径、高さ、底面の分割数
 var coneMaterial = new THREE. MeshPhongMaterial( {color: 0x0000ff} );
@@ -47,6 +47,14 @@ cone2.rotation.x = 3.14;
 cone2.position.set( 0, -0.8, 0 );
 //scene.add( cone1 );
 //scene.add( cone2 );
+    
+  //ドーナッツ
+var torusGeometry = new THREE.TorusGeometry( 0.4, 0.5, 30, 30 ); 
+var torusMaterial = new THREE. MeshToonMaterial( { color: 0xd66b00 } );
+var torus = new THREE.Mesh( torusGeometry, torusMaterial );
+torus.rotation.x = 1.57
+torus.position.set( 0, 0, 0);
+scene.add( torus );    
 
      //全体のオブジェクト
     //const all = new THREE.Object3D(); 
@@ -83,7 +91,7 @@ cone2.position.set( 0, -0.8, 0 );
             // 箱を回転させる
         all.rotation.x += 0.01;
         all.rotation.y += 0.05;
-        all.rotation.z += 0.01;
+        //all.rotation.z += 0.01;
   
       renderer.render(scene, camera);
     };
