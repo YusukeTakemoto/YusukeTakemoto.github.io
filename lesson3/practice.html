@@ -33,9 +33,14 @@ var textureLoader = new THREE.TextureLoader();
   var texture = textureLoader.load("Kegawawhite.png");
   var mat = new THREE.MeshPhongMaterial();
   mat.map = texture;
+    
+// バンプマップ読み込み
+  var bump = textureLoader.load("Kegawawhite.jpg");
+  mat.bumpMap = bump;
+  mat.bumpscale = 0.5;
 
   // 球を作成
-  var geometry2 = new THREE.SphereGeometry(0.5, 32, 32 ); ;
+  var geometry2 = new THREE.SphereGeometry(0.5, 32, 32 );
   var Sphere = new THREE.Mesh(geometry2, mat);
   Sphere.position.set(0,0,-5);
   scene.add(Sphere);
