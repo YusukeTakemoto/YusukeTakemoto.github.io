@@ -30,12 +30,12 @@
 
    // テクスチャー読み込み
    var textureLoader = new THREE.TextureLoader();  
-  var texture = textureLoader.load("TATAMI.jpg");
+  var texture = textureLoader.load("Kegawawhite.jpg");
   var mat = new THREE.MeshPhongMaterial();
   mat.map = texture;
   
   // バンプマップ読み込み
-  var bump = textureLoader.load("TATAMI-bump.jpg");
+  var bump = textureLoader.load("Kegawawhite-bump.jpg");
   mat.bumpMap = bump;
   mat.bumpscale = 0.2;
 
