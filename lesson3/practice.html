@@ -33,17 +33,24 @@ var textureLoader = new THREE.TextureLoader();
   var texture = textureLoader.load("Kegawawhite.jpg");
   var mat = new THREE.MeshPhongMaterial();
   mat.map = texture;
-    
-// バンプマップ読み込み
-  var bump = textureLoader.load("Kegawawhite.jpg");
-  mat.bumpMap = bump;
-  mat.bumpscale = 0.5;
+
+  // 箱を作成
+  var geometry1 = new THREE.BoxGeometry(1, 1, 1);
+  var box = new THREE.Mesh(geometry1, mat);
+  box.position.set(1.5,0,-5);
+  scene.add(box);
 
   // 球を作成
-  var geometry2 = new THREE.SphereGeometry(0.5, 32, 32 );
+  var geometry2 = new THREE.SphereGeometry(0.5, 32, 32 ); ;
   var Sphere = new THREE.Mesh(geometry2, mat);
   Sphere.position.set(0,0,-5);
   scene.add(Sphere);
+
+  // 円柱を作成
+  var geometry3 = new THREE.CylinderGeometry( 0, 0.5, 1, 20, 4 );
+  var Cylinder = new THREE.Mesh(geometry3, mat);
+  Cylinder.position.set(-1.5,0,-5);
+  scene.add(Cylinder);
 
   // 平行光源
   var directionalLight1 = new THREE.DirectionalLight(0xffffff);
