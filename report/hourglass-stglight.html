@@ -8,9 +8,6 @@
   <!-- <script src="./three.js"></script> -->
   <!-- three.jsを読み込む(CDN) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/99/three.min.js"></script>
-  <script src="../lesson4/OrbitControls.js"></script>
-  // ページの読み込みを待つ
-  window.addEventListener('load', init);
   
 </head>
 <body>
@@ -30,11 +27,6 @@
   
     // カメラを作成
     var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
-    // カメラの初期座標を設定
-        camera.position.set(0, 0, 1000);
-
-    // カメラコントローラーを作成
-    const controls = new THREE.OrbitControls(camera,document.body);
 
 //球
 var sphereGeometry = new THREE.SphereGeometry( 0.2, 32, 32 ); 
@@ -108,16 +100,6 @@ torus2.position.set( 0, -1, 0);
     update();
   }
   window.addEventListener('DOMContentLoaded', init);
-   
-   tick();
-
-   // 毎フレーム時に実行されるループイベントです
-       function tick() {
-       // レンダリング
-       renderer.render(scene, camera);
-       requestAnimationFrame(tick);
-       }
-     }
       
 </script>
 </body>
