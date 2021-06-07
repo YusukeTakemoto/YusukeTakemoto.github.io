@@ -105,6 +105,17 @@
         sprite4.scale.set(100,100,100);
         scene.add(sprite4);            
 
+        // 太陽をスプライトで作成 
+        var texture5 = textureLoader.load("img/sun.png");
+        const material5 = new THREE.SpriteMaterial({ map: texture5,});
+
+        const sprite5 = new THREE.Sprite(material5);
+        sprite5.position.x = 50;
+        sprite5.position.y = 100;
+        sprite5.position.z = 50;
+        sprite5.scale.set(100,100,100);
+        scene.add(sprite4);          
+        
         tick();
         // 毎フレーム時に実行されるループイベントです
         function tick() {
