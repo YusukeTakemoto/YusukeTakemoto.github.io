@@ -69,12 +69,12 @@
         
         var bump = textureLoader2.load("gomball.jpg");
         mat.bumpmap = bump;
-        mat.bumpscale = 0.5;
+        mat.bumpscale = 0.8;
 
         // 球を作成
         var geometry = new THREE.SphereGeometry(10, 10, 10 ); ;
         var Sphere = new THREE.Mesh(geometry, mat);
-        Sphere.position.set(-50, 8, 50);
+        Sphere.position.set(-50, 9, 50);
         scene.add(Sphere);
         
    // テクスチャー読み込み
