@@ -71,12 +71,22 @@
         mat.bumpmap = bump;
         mat.bumpscale = 0.5;
 
+      
+	      
         // ゴムボールを作成
         var geometry = new THREE.SphereGeometry(10, 10, 10 ); ;
         var Sphere = new THREE.Mesh(geometry, mat);
         Sphere.position.set(-50, 10, 50);
         scene.add(Sphere);     
-
+	      
+  // 箱を作成
+  var geometry = new THREE.BoxGeometry(1, 1, 1);
+  //var material = new THREE.MeshPhongMaterial({ color: 0xffffff });
+  //var box = new THREE.Mesh(geometry, material);
+  var box = new THREE.Mesh(geometry, mat);
+  box.position.z = -5;
+  scene.add(box);
+	      
         // 木1をスプライトで作成 
         var texture1 = textureLoader.load("img/tree1.png");
         const material1 = new THREE.SpriteMaterial({ map: texture1,});
