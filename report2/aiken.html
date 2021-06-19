@@ -71,6 +71,18 @@
         sprite1.position.z = -100;
         sprite1.scale.set(100,100,100);
         scene.add(sprite1);
+        
+        // テクスチャー読み込み
+        var textureLoader = new THREE.TextureLoader();  
+        var texture = textureLoader.load("tennisball.png");
+        var mat = new THREE.MeshPhongMaterial();
+        mat.map = texture;
+
+        // 球を作成
+        var geometry2 = new THREE.SphereGeometry(0.5, 32, 32 ); ;
+        var Sphere = new THREE.Mesh(geometry2, mat);
+        Sphere.position.set(0,0,-5);
+        scene.add(Sphere);        
 
         // 木2をスプライトで作成 
         var texture2 = textureLoader.load("img/tree2.png");
