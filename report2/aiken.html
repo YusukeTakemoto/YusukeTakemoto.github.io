@@ -1,3 +1,4 @@
+
 <html>
   <head>
     <meta charset="utf-8" />
@@ -40,20 +41,12 @@
         // シーンに追加
         scene.add(directionalLight2);
 
-        // テクスチャー読み込み
-        //var textureLoader = new THREE.TextureLoader();  
-        //var texture = textureLoader.load("img/Nana.png");
-        //var mat = new THREE.MeshPhongMaterial();
-        //mat.map = texture;
+        // 箱を作成(原点に作成)
+        var geometry = new THREE.BoxGeometry(300, 100, 300);
+        var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
+        var box = new THREE.Mesh(geometry, material);
+        scene.add(box);
 
-        
-    // 頭を作成
-    var head = new THREE.BoxGeometry( 100, 100, 100 );
-    var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
-    var head = new THREE.Mesh(head, material);
-    head.position.set(0,1.2,0);//allの中心が原点になる
-        
-        
         tick();
 
         // 毎フレーム時に実行されるループイベントです
