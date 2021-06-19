@@ -25,7 +25,7 @@
         // カメラを作成
         const camera = new THREE.PerspectiveCamera(45, width / height);
         // カメラの初期座標を設定
-        camera.position.set(0, 0, 100);
+        camera.position.set(0, 0, 200);
 
         // カメラコントローラーを作成
         const controls = new THREE.OrbitControls(camera,document.body);
@@ -41,19 +41,26 @@
         // シーンに追加
         scene.add(directionalLight2);
 
-        // 箱1を作成
+        // 頭を作成
         var geometry = new THREE.BoxGeometry(30, 12, 20);
         var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
         var box1 = new THREE.Mesh(geometry, material);
         box1.position.set(0.3, 0, -5)
         scene.add(box1);
-        
-        // 箱2を作成
-        var geometry = new THREE.BoxGeometry(5, 4, 6);
+
+        // 頭を作成
+        var geometry = new THREE.BoxGeometry(20, 8, 20);
         var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
         var box2 = new THREE.Mesh(geometry, material);
-        box2.position.set(16, 4, -5)
-        scene.add(box2);        
+        box2.position.set(0.3, 5, -5)
+        scene.add(box2);
+        
+        // 鼻を作成
+        var geometry = new THREE.BoxGeometry(5, 4, 6);
+        var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
+        var box3 = new THREE.Mesh(geometry, material);
+        box3.position.set(16, 4, -5)
+        scene.add(box3);        
 
         tick();
 
