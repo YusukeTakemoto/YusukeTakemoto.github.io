@@ -133,10 +133,17 @@
         sprite5.position.z = 50;
         sprite5.scale.set(100,100,100);
         scene.add(sprite5);
-	      
-        var texture6 = textureLoader.load("kusahara.jpg");
-        var material6 = new THREE.MeshLambertMaterial({ side: THREE.DoubleSide});
+	
+	//草原を作成
+	var textureLoader6 = new THREE.TextureLoader()
+        var texture6 = textureLoader6.load("kusahara.jpg");
+	var material6 = new THREE.MeshPhongMaterial();
         material6.map = texture6;
+	      
+	var bump = textureLoader6.load("kusahara.jpg");  
+	material6.bumpmap = bump;
+	material6.bumpscale = 0.5;
+	      
         var planeGeometry = new THREE.PlaneGeometry(300,300);
         var plane = new THREE.Mesh(planeGeometry, material6);
         plane.rotation.set(-Math.PI/2,0,0);
