@@ -31,18 +31,18 @@
         const controls = new THREE.OrbitControls(camera,document.body);
   
         // 平行光源1
-        var directionalLight1 = new THREE.DirectionalLight(0xffffff);
+        var directionalLight1 = new THREE.DirectionalLight(0xffffff, 1);
         directionalLight1.position.set(100, 100, 100);
         // シーンに追加
         scene.add(directionalLight1);
         // 平行光源2
-        var directionalLight2 = new THREE.DirectionalLight(0xffffff);
+        var directionalLight2 = new THREE.DirectionalLight(0xffffff, 2);
         directionalLight2.position.set(-100, 100, 100);
         // シーンに追加
         scene.add(directionalLight2);
         
         // 平行光源3
-        var directionalLight3 = new THREE.DirectionalLight(0xffffff);
+        var directionalLight3 = new THREE.DirectionalLight(0xffffff, 5);
         directionalLight3.position.set(100, 100, -100);
         // シーンに追加
         scene.add(directionalLight3);        
