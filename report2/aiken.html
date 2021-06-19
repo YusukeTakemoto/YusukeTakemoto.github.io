@@ -132,7 +132,16 @@
         sprite5.position.y = 300;
         sprite5.position.z = 50;
         sprite5.scale.set(100,100,100);
-        scene.add(sprite5);          
+        scene.add(sprite5);
+	      
+        var texture6 = textureLoader.load("img/kusahara.jpg");
+        var material6 = new THREE.MeshLambertMaterial({ side: THREE.DoubleSide});
+        material6.map = texture6;
+        var planeGeometry = new THREE.PlaneGeometry(300,300);
+        var plane = new THREE.Mesh(planeGeometry, material6);
+        plane.rotation.set(-Math.PI/2,0,0);
+        plane.position.set(0, 0, 0);
+        scene.add(plane);	      
         
         tick();
         // 毎フレーム時に実行されるループイベントです
