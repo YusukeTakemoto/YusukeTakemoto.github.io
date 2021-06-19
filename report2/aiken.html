@@ -80,7 +80,9 @@
         // 球を作成
         var geometry = new THREE.SphereGeometry(0.5, 32, 32 ); ;
         var Sphere = new THREE.Mesh(geometry, mat);
-        Sphere.position.set(0,0,0);
+        Sphere.position.x = 0;
+        Sphere.position.y = 20;
+        Sphere.position.z = 20;
         scene.add(Sphere);        
 
         // 木2をスプライトで作成 
