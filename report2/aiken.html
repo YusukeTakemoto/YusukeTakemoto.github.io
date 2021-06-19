@@ -63,11 +63,11 @@
 
         // テクスチャー読み込み
         var textureLoader2 = new THREE.TextureLoader();  
-        var texture = textureLoader2.load("gomball.png");
+        var texture = textureLoader2.load("gomball.jpg");
         var mat = new THREE.MeshPhongMaterial();
         mat.map = texture;
         
-        var bump = textureLoader2.load("gomball.png");
+        var bump = textureLoader2.load("gomball.jpg");
         mat.bumpmap = bump;
         mat.bumpscale = 0.5;
 
