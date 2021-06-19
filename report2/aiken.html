@@ -40,6 +40,12 @@
         directionalLight2.position.set(-100, 100, 100);
         // シーンに追加
         scene.add(directionalLight2);
+        
+        // 平行光源3
+        var directionalLight3 = new THREE.DirectionalLight(0xffffff);
+        directionalLight3.position.set(100, 100, -100);
+        // シーンに追加
+        scene.add(directionalLight3);        
 
         // 頭を作成
         var geometry = new THREE.BoxGeometry(30, 12, 20);
