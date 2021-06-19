@@ -57,7 +57,7 @@
         var bump = textureLoader.load("img/Nana.png");
         mat.bumpMap = bump;
         mat.bumpscale = 0.5;
-        const material0 = new THREE.SpriteMaterial({ map: texture0,});
+        const material0 = new THREE.SpriteMaterial({ map: mat,});
 
         const sprite0 = new THREE.Sprite(material0);
         sprite0.position.x = 0;
