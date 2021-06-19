@@ -57,7 +57,7 @@
         const sprite0 = new THREE.Sprite(material0);
         sprite0.position.x = 0;
         sprite0.position.y = 50;
-        sprite0.position.z = -20;
+        sprite0.position.z = 20;
         sprite0.scale.set(70,120,70);
         scene.add(sprite0);
 
@@ -74,7 +74,7 @@
         // 球を作成
         var geometry = new THREE.SphereGeometry(10, 10, 10 ); ;
         var Sphere = new THREE.Mesh(geometry, mat);
-        Sphere.position.set(-50, 9, 50);
+        Sphere.position.set(-50, 9, 70);
         scene.add(Sphere);
         
    // テクスチャー読み込み
