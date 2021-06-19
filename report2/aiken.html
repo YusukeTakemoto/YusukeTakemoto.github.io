@@ -6,12 +6,10 @@
     <script>
       // ページの読み込みを待つ
       window.addEventListener('load', init);
-
       function init() {
         // サイズを指定
         const width = 960;
         const height = 540;
-
         // レンダラーを作成
         const renderer = new THREE.WebGLRenderer({
           canvas: document.querySelector('#myCanvas')
@@ -19,15 +17,12 @@
         renderer.setSize(width, height);
         // 背景の色を設定
         renderer.setClearColor(0xeeeeff);
-
         // シーンを作成
         const scene = new THREE.Scene();
-
         // カメラを作成
         const camera = new THREE.PerspectiveCamera(45, width / height);
         // カメラの初期座標を設定
         camera.position.set(0, 0, 1000);
-
         // カメラコントローラーを作成
         const controls = new THREE.OrbitControls(camera,document.body);
   
@@ -41,19 +36,15 @@
         directionalLight2.position.set(-100, 100, 100);
         // シーンに追加
         scene.add(directionalLight2);
-
         // helper
       const gridHelper = new THREE.GridHelper(200,50); // size, step
       scene.add(gridHelper);
-
       const axisHelper = new THREE.AxisHelper(200,50);
       scene.add(axisHelper);
-
         // 犬をスプライトで作成
         var textureLoader1 = new THREE.TextureLoader();  
         var texture0 = textureLoader1.load("img/aiken.png");
         const material0 = new THREE.SpriteMaterial({ map: texture0,});
-
         const sprite0 = new THREE.Sprite(material0);
         sprite0.position.x = 0;
         sprite0.position.y = 50;
@@ -66,43 +57,66 @@
         var texture = textureLoader2.load("gomball.jpg");
         var mat = new THREE.MeshPhongMaterial();
         mat.map = texture;
-        
+
         var bump = textureLoader2.load("gomball.jpg");
         mat.bumpmap = bump;
         mat.bumpscale = 0.5;
-  
-        // ゴムボールを作成
+
+        // 球を作成
         var geometry = new THREE.SphereGeometry(10, 10, 10 ); ;
         var Sphere = new THREE.Mesh(geometry, mat);
-        Sphere.position.set(-50, 10, 50);
+        Sphere.position.set(-50, 6, 50);
         scene.add(Sphere);
-	      
+        
+   // テクスチャー読み込み
+   var textureLoader = new THREE.TextureLoader();  
+  var texture = textureLoader.load("Nanaaccount (2).jpg");
+  var mat = new THREE.MeshPhongMaterial();
+  mat.map = texture;
+  
+  // バンプマップ読み込み
+  var bump = textureLoader.load("Nanaaccount (2).jpg");
+  mat.bumpMap = bump;
+  mat.bumpscale = 0.5;
+  // 箱を作成
+  var geometry = new THREE.BoxGeometry(1, 1, 1);
+  //var material = new THREE.MeshPhongMaterial({ color: 0xffffff });
+  //var box = new THREE.Mesh(geometry, material);
+  var box = new THREE.Mesh(geometry, mat);
+  box.position.z = -5;
+  scene.add(box);        
+        
+        
+        //var texture
+	      //var material = new THREE.MeshPhongMaterial();
+	      //var bump6 = textureLoader.load("img/tennisball_bump.jpg");
+	      //material.bumpMap = bump6;
+	      //material.bumpscale = 0.2;
+	      //var sphere = new THREE.sphereGeometry(30, 10);
+	      //var sphere = new THREE.Mesh(sphere, material);
+	      //plane.position.set(-50, 6, 50);
+	      //scene.add(plane);        
         // 木1をスプライトで作成 
         var texture1 = textureLoader.load("img/tree1.png");
         const material1 = new THREE.SpriteMaterial({ map: texture1,});
-
         const sprite1 = new THREE.Sprite(material1);
         sprite1.position.x = 100;
         sprite1.position.y = 50;
         sprite1.position.z = -100;
         sprite1.scale.set(100,100,100);
         scene.add(sprite1);
-
         // 木2をスプライトで作成 
         var texture2 = textureLoader.load("img/tree2.png");
         const material2 = new THREE.SpriteMaterial({ map: texture2,});
-
         const sprite2 = new THREE.Sprite(material2);
         sprite2.position.x = -100;
         sprite2.position.y = 50;
         sprite2.position.z = -100;
         sprite2.scale.set(100,100,100);
         scene.add(sprite2);
-
         // 太陽をスプライトで作成 
         var texture5 = textureLoader.load("img/sun.png");
         const material5 = new THREE.SpriteMaterial({ map: texture5,});
-
         const sprite5 = new THREE.Sprite(material5);
         sprite5.position.x = 50;
         sprite5.position.y = 300;
@@ -121,7 +135,3 @@
     </script>
   </head>
 
-  <body>
-    <canvas id="myCanvas"></canvas>
-  </body>
-</html>
