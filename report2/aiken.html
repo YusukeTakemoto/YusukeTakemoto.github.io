@@ -46,10 +46,6 @@
         var mat = new THREE.MeshPhongMaterial();
         mat.map = texture;
 
-        // 地球を作成(原点に作成)
-        var geometry = new THREE.SphereGeometry(300, 30, 30);
-        var earth = new THREE.Mesh(geometry, mat);
-        scene.add(earth);
         
     // 頭を作成
     var head = new THREE.BoxGeometry( 1, 1, 1 );
