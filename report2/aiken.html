@@ -68,18 +68,7 @@
         var geometry = new THREE.SphereGeometry(10, 10, 10 ); ;
         var Sphere = new THREE.Mesh(geometry, mat);
         Sphere.position.set(-50, 9, 70);
-        scene.add(Sphere);
-        
-   // テクスチャー読み込み
-   var textureLoader = new THREE.TextureLoader();  
-  var texture = textureLoader.load("Nanaaccount (2).jpg");
-  var mat = new THREE.MeshPhongMaterial();
-  mat.map = texture;
-  
-  // バンプマップ読み込み
-  var bump = textureLoader.load("Nanaaccount (2).jpg");
-  mat.bumpMap = bump;
-  mat.bumpscale = 0.5;      
+        scene.add(Sphere);     
 
         // 木1をスプライトで作成 
         var texture1 = textureLoader.load("img/tree1.png");
