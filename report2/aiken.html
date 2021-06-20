@@ -68,7 +68,10 @@
         var geometry = new THREE.SphereGeometry(10, 10, 10 ); ;
         var Sphere = new THREE.Mesh(geometry, mat);
         Sphere.position.set(-50, 9, 70);
-        scene.add(Sphere);     
+        scene.add(Sphere);
+        
+   // テクスチャー読み込み
+   var textureLoader = new THREE.TextureLoader();    
 
         // 木1をスプライトで作成 
         var texture1 = textureLoader.load("img/tree1.png");
