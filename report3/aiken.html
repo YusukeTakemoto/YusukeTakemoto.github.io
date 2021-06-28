@@ -56,11 +56,11 @@
 
         // テクスチャー読み込み
         var textureLoader2 = new THREE.TextureLoader();  
-        var texture = textureLoader2.load("gomball.jpg");
+        var texture = textureLoader2.load("img/gomball.jpg");
         var mat = new THREE.MeshPhongMaterial();
         mat.map = texture;
         
-        var bump1 = textureLoader2.load("gomball.jpg");
+        var bump1 = textureLoader2.load("img/gomball.jpg");
         mat.bumpMap = bump1;
         mat.bumpscale = 0.8;
 
@@ -96,7 +96,7 @@
         scene.add(sprite2);
 
         // 太陽をスプライトで作成 
-        var texture5 = textureLoader.load("taiyou.png");
+        var texture5 = textureLoader.load("img/taiyou.png");
         const material5 = new THREE.SpriteMaterial({ map: texture5,});
 
         const sprite5 = new THREE.Sprite(material5);
@@ -108,11 +108,11 @@
 	
 	//草原を作成
 	var textureLoader6 = new THREE.TextureLoader()
-        var texture6 = textureLoader6.load("kusahara.jpg");
+        var texture6 = textureLoader6.load("img/kusahara.jpg");
 	var material6 = new THREE.MeshPhongMaterial();
         material6.map = texture6;
 	      
-	var bump2 = textureLoader6.load("kusahara.jpg");  
+	var bump2 = textureLoader6.load("img/kusahara.jpg");  
 	material6.bumpMap = bump2;
 	material6.bumpscale = 0.5;
 	      
