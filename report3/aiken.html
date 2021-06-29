@@ -88,7 +88,12 @@
 	var geometry3 = new THREE.BoxGeometry(200, 80, 150); ;
 	var Box2 = new THREE.Mesh(geometry3, mat2)
 	Box2.position.set(0, 30, -150)
-	scene.add(Box2);	      
+	scene.add(Box2);
+	      
+	var geometry4 = new THREE.BoxGeometry(50, 100, 150); ;
+	var Box3 = new THREE.Mesh(geometry4, mat2)
+	Box3.position.set(-100, 50, -200)
+	scene.add(Box3);	      
         
    // テクスチャー読み込み
    var textureLoader = new THREE.TextureLoader();    
