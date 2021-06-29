@@ -18,7 +18,7 @@
         });
         renderer.setSize(width, height);
         // 背景の色を設定
-        renderer.setClearColor(0x1e90ff);
+        renderer.setClearColor(0xe6e6fa);
 
         // シーンを作成
         const scene = new THREE.Scene();
@@ -84,7 +84,11 @@
 	var Box1 = new THREE.Mesh(geometry2, mat2)
 	Box1.position.set(0, 90, -200)
 	scene.add(Box1);
-	 
+
+	var geometry3 = new THREE.BoxGeometry(200, 60, 100); ;
+	var Box1 = new THREE.Mesh(geometry2, mat2)
+	Box1.position.set(0, 30, -150)
+	scene.add(Box1);	      
         
    // テクスチャー読み込み
    var textureLoader = new THREE.TextureLoader();    
