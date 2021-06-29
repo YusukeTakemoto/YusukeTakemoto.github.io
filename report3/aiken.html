@@ -98,7 +98,22 @@
 	var geometry5 = new THREE.BoxGeometry(50, 100, 160); ;
 	var Box4 = new THREE.Mesh(geometry5, mat2)
 	Box4.position.set(125, 50, -150)
-	scene.add(Box4);	      
+	scene.add(Box4);
+	      
+	var textureLoader4 = new THREE.TextureLoader();
+	var texture =textureLoader4.load("img/juutan.png")      
+        var mat3 = new THREE.MeshPhongMaterial();
+	mat3.map = texture;      
+
+	var bump4 = textureLoader4.load("img/juutan.png");
+	mat3.bumpMap = bump4;
+	mat3.bumpscale = 0.05      
+
+        var cylinderGeometry = new THREE.CylinderGeometry( 100, 100, 5, 16 );
+	//上の底面の半径、下の底面の半径、高さ、何角柱か
+   　　 var cylinder = new THREE.Mesh(cylinderGeometry, mat3);
+ 　　   cylinder.position.set( 0, 50, 0 );
+　　    scene.add(cylinder);	      
 	      
    // テクスチャー読み込み
    var textureLoader = new THREE.TextureLoader();    
