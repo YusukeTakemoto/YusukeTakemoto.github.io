@@ -129,7 +129,18 @@
 	var geometry6 = new THREE.BoxGeometry(250, 70, 120); ;
 	var Box5 = new THREE.Mesh(geometry6, mat4)
 	Box5.position.set(0, 35, 230)
-	scene.add(Box5);	      
+	scene.add(Box5);
+	      
+        // テクスチャー読み込み
+        var textureLoader6 = new THREE.TextureLoader();  
+        var texture = textureLoader6.load("img/black.jpg");
+        var mat5 = new THREE.MeshPhongMaterial();
+        mat5.map = texture;
+	      
+	var geometry7 = new THREE.BoxGeometry(100, 10, 100); ;
+	var Box6 = new THREE.Mesh(geometry7, mat5)
+	Box6.position.set(0, 40, 230)
+	scene.add(Box6);	      
 	      
    // テクスチャー読み込み
    var textureLoader = new THREE.TextureLoader();    
@@ -137,17 +148,17 @@
 
 	
 	//床を作成
-	var textureLoader6 = new THREE.TextureLoader()
-        var texture6 = textureLoader6.load("img/yuka2.png");
-	var material6 = new THREE.MeshPhongMaterial();
-        material6.map = texture6;
+	var textureLoader10 = new THREE.TextureLoader()
+        var texture10 = textureLoader10.load("img/yuka2.png");
+	var material10 = new THREE.MeshPhongMaterial();
+        material10.map = texture10;
 	      
-	var bump2 = textureLoader6.load("img/yuka2.png");  
-	material6.bumpMap = bump2;
-	material6.bumpscale = 0.05;
+	var bump5 = textureLoader6.load("img/yuka2.png");  
+	material10.bumpMap = bump5;
+	material10.bumpscale = 0.05;
 	      
         var planeGeometry = new THREE.PlaneGeometry(600,600);
-        var plane = new THREE.Mesh(planeGeometry, material6);
+        var plane = new THREE.Mesh(planeGeometry, material10);
         plane.rotation.set(-Math.PI/2,0,0);
         plane.position.set(0, 0, 0);
         scene.add(plane);	      
