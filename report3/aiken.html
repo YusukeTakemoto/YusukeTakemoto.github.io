@@ -62,7 +62,7 @@
         
         var bump1 = textureLoader2.load("img/gomball.jpg");
         mat.bumpMap = bump1;
-        mat.bumpscale = 0.8;
+        mat.bumpscale = 0.05;
 
         // 球を作成
         var geometry = new THREE.SphereGeometry(15, 15, 15 ); ;
@@ -113,7 +113,7 @@
 	      
 	var bump2 = textureLoader6.load("img/yuka2.png");  
 	material6.bumpMap = bump2;
-	material6.bumpscale = 0.5;
+	material6.bumpscale = 0.05;
 	      
         var planeGeometry = new THREE.PlaneGeometry(500,500);
         var plane = new THREE.Mesh(planeGeometry, material6);
