@@ -44,14 +44,14 @@
 
         // 犬をスプライトで作成
         var textureLoader1 = new THREE.TextureLoader();  
-        var texture0 = textureLoader1.load("img/aiken.png");
+        var texture0 = textureLoader1.load("img/Nana.png");
         const material0 = new THREE.SpriteMaterial({ map: texture0,});
 
         const sprite0 = new THREE.Sprite(material0);
         sprite0.position.x = 0;
         sprite0.position.y = 50;
         sprite0.position.z = 20;
-        sprite0.scale.set(70,120,70);
+        sprite0.scale.set(100,150,100);
         scene.add(sprite0);
 
         // テクスチャー読み込み
@@ -80,9 +80,9 @@
         mat2.bumpMap = bump3;
         mat2.bumpscale = 0.8;	      
 	      
-	var geometry2 = new THREE.BoxGeometry(200, 180, 50); ;
+	var geometry2 = new THREE.BoxGeometry(200, 150, 50); ;
 	var Box1 = new THREE.Mesh(geometry2, mat2)
-	Box1.position.set(0, 90, -200)
+	Box1.position.set(0, 75, -200)
 	scene.add(Box1);
 
 	var geometry3 = new THREE.BoxGeometry(200, 80, 150); ;
