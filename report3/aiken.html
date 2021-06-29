@@ -136,6 +136,10 @@
         var texture = textureLoader6.load("img/black.jpg");
         var mat5 = new THREE.MeshPhongMaterial();
         mat5.map = texture;
+	
+        var bump6 = textureLoader6.load("img/black.jpg");
+        mat5.bumpMap = bump6;
+        mat5.bumpscale = 0.05;	      
 	      
 	var geometry7 = new THREE.BoxGeometry(100, 10, 100); ;
 	var Box6 = new THREE.Mesh(geometry7, mat5)
