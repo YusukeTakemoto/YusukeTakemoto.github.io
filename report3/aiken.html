@@ -131,6 +131,11 @@
 	Box5.position.set(0, 35, 240)
 	scene.add(Box5);
 	      
+	var geometry11 = new THREE.BoxGeometry(100, 70, 10); ;
+	var Box9 = new THREE.Mesh(geometry11, mat4)
+	Box9.position.set(50, 35, 190)
+	scene.add(Box9);	      
+	      
         // テクスチャー読み込み
         var textureLoader6 = new THREE.TextureLoader();  
         var texture = textureLoader6.load("img/black.jpg");
