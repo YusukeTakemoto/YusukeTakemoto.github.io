@@ -180,6 +180,17 @@
 	cylinder3.rotation.set(Math.PI/2,0,0);    
 　　    scene.add(cylinder3);
 
+        // 植物をスプライトで作成
+        var textureLoader8 = new THREE.TextureLoader();  
+        var texture = textureLoader8.load("img/shokubutu.png");
+        const mat7 = new THREE.SpriteMaterial({ map: texture,});
+
+        const sprite1 = new THREE.Sprite(mat7);
+        sprite1.position.x = -100;
+        sprite1.position.y = 100;
+        sprite1.position.z = 240;
+        sprite1.scale.set(120,120,120);
+        scene.add(sprite1);	      
 	
 	//床を作成
 	var textureLoader10 = new THREE.TextureLoader()
