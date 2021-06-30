@@ -162,8 +162,21 @@
 	Box8.position.set(0, 145, 230)
 	scene.add(Box8);	      
 	      
-   // テクスチャー読み込み
-  // var textureLoader = new THREE.TextureLoader();    
+	//取っ手の作成      
+	var textureLoader7 = new THREE.TextureLoader();
+	var texture =textureLoader7.load("img/giniro.jpg")      
+        var mat6 = new THREE.MeshPhongMaterial();
+	mat6.map = texture;      
+
+	var bump6 = textureLoader7.load("img/giniro.jpg");
+	mat6.bumpMap = bump6;
+	mat6.bumpscale = 0.05      
+
+        var cylinderGeometry2 = new THREE.CylinderGeometry( 10, 20, 15, 16 );
+	//上の底面の半径、下の底面の半径、高さ、何角柱か
+   　　 var cylinder2 = new THREE.Mesh(cylinderGeometry2, mat6);
+ 　　   cylinder2.position.set( 30, 60, 140);
+　　    scene.add(cylinder2);
 
 
 	
