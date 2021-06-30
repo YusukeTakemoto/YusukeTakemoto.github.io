@@ -79,7 +79,8 @@
         var bump3 = textureLoader3.load("img/sofa.jpg");
         mat2.bumpMap = bump3;
         mat2.bumpscale = 0.05;	      
-	      
+	
+	//ソファの作成      
 	var geometry2 = new THREE.BoxGeometry(200, 150, 50); ;
 	var Box1 = new THREE.Mesh(geometry2, mat2)
 	Box1.position.set(0, 75, -250)
@@ -122,6 +123,7 @@
         var mat4 = new THREE.MeshPhongMaterial();
         mat4.map = texture;
         
+	//テレビ台の作成      
         var bump5 = textureLoader5.load("img/mokume.jpg");
         mat4.bumpMap = bump5;
         mat4.bumpscale = 0.05;
@@ -146,7 +148,7 @@
         var texture = textureLoader6.load("img/black.jpg");
         var mat5 = new THREE.MeshPhongMaterial();
         mat5.map = texture;      
-	      
+	
 	var geometry7 = new THREE.BoxGeometry(150, 10, 40); ;
 	var Box6 = new THREE.Mesh(geometry7, mat5)
 	Box6.position.set(40, 75, 250)
