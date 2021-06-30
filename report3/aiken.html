@@ -168,17 +168,17 @@
         var mat6 = new THREE.MeshPhongMaterial();
 	mat6.map = texture;      
 
-	var bump6 = textureLoader7.load("img/giniro.jpg");
-	mat6.bumpMap = bump6;
-	mat6.bumpscale = 0.05      
-
         var cylinderGeometry2 = new THREE.CylinderGeometry( 3, 5, 7, 16 );
-	//上の底面の半径、下の底面の半径、高さ、何角柱か
-   　　 var cylinder2 = new THREE.Mesh(cylinderGeometry2, mat6);
- 　　   cylinder2.position.set( 30, 60, 182);
+   　　 var cylinder2 = new THREE.Mesh(cylinderGeometry2, mat6);     
+ 　　   cylinder2.position.set( 30, 50, 182);
 	cylinder2.rotation.set(Math.PI/2,0,0);    
 　　    scene.add(cylinder2);
 
+        var cylinderGeometry3 = new THREE.CylinderGeometry( 3, 5, 7, 16 );
+   　　 var cylinder3 = new THREE.Mesh(cylinderGeometry3, mat6);     
+ 　　   cylinder3.position.set( -30, 50, 182);
+	cylinder3.rotation.set(Math.PI/2,0,0);    
+　　    scene.add(cylinder3);
 
 	
 	//床を作成
